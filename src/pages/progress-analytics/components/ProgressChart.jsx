@@ -26,9 +26,8 @@ const ProgressChart = () => {
 
   const routineDistribution = [
     { name: "Breathing", value: 35, color: "#3398DB" },
-    { name: "Stretching", value: 28, color: "#7EC8E3" },
     { name: "Posture", value: 22, color: "#A3E4D7" },
-    { name: "Stress Relief", value: 15, color: "#F6E7C1" }
+    { name: "Stress Relief", value: 43, color: "#F6E7C1" }
   ];
 
   const currentData = selectedPeriod === 'week' ? weeklyData : monthlyData;

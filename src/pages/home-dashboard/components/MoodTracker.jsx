@@ -6,16 +6,16 @@ const MoodTracker = ({ onMoodChange }) => {
   const [isTracking, setIsTracking] = useState(false);
 
   const moodLevels = [
-    { value: 1, label: "Very Low", color: "#EF4444", emoji: "😢" },
+    { value: 1, label: "Very Low", color: "#EF4444", emoji: "🫨" },
     { value: 2, label: "Low", color: "#F97316", emoji: "😔" },
-    { value: 3, label: "Below Average", color: "#EAB308", emoji: "😐" },
-    { value: 4, label: "Fair", color: "#84CC16", emoji: "🙂" },
+    { value: 3, label: "Below Average", color: "#ea9308ff", emoji: "😐" },
+    { value: 4, label: "Fair", color: "#ccba16ff", emoji: "🙂" },
     { value: 5, label: "Good", color: "#22C55E", emoji: "😊" },
     { value: 6, label: "Very Good", color: "#10B981", emoji: "😄" },
     { value: 7, label: "Great", color: "#06B6D4", emoji: "😁" },
     { value: 8, label: "Excellent", color: "#3B82F6", emoji: "🤩" },
     { value: 9, label: "Amazing", color: "#8B5CF6", emoji: "😍" },
-    { value: 10, label: "Perfect", color: "#A855F7", emoji: "🥰" }
+    { value: 10, label: "Perfect", color: "#A855F7", emoji: "😎" }
   ];
 
   const getCurrentMoodData = () => {

@@ -10,6 +10,8 @@ import ProfileSettings from './pages/profile-settings';
 import TeamDashboard from './pages/team-dashboard';
 import ProgressAnalytics from './pages/progress-analytics';
 import CommunityPage from './pages/community';
+import SettingsPage from './pages/settings';
+import ContactUs from './pages/contact-us';
 
 const Routes = () => {
   return (
@@ -23,6 +25,8 @@ const Routes = () => {
         <Route path="/home-dashboard" element={<HomeDashboard />} />
         <Route path="/personal-info-input" element={<PersonalInfoInput />} />
         <Route path="/profile-settings" element={<ProfileSettings />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/team-dashboard" element={<TeamDashboard />} />
         <Route path="/progress-analytics" element={<ProgressAnalytics />} />
         <Route path="/community" element={<CommunityPage />} />

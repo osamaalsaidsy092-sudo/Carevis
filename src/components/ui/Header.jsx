@@ -21,7 +21,7 @@ const Header = ({ userRole = 'user' }) => {
 
   const secondaryItems = [
     { label: 'Settings', path: '/settings', icon: 'Settings' },
-    { label: 'Help', path: '/help', icon: 'HelpCircle' },
+    { label: 'Contact Us', path: '/contact-us', icon: 'Mail' },
   ];
 
   const isActive = (path) => location?.pathname === path;
@@ -33,8 +33,8 @@ const Header = ({ userRole = 'user' }) => {
 
   const Logo = () => (
     <div className="flex items-center space-x-2">
-      <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-        <Icon name="Heart" size={20} color="white" />
+      <div className="w-8 h-8 rounded-lg overflow-hidden bg-transparent flex items-center justify-center">
+        <img src="/images/LOGO.png" alt="CareVis logo" className="w-full h-full object-contain" />
       </div>
       <span className="text-xl font-semibold text-foreground">CareVis</span>
     </div>

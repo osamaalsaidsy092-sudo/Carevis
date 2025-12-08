@@ -61,7 +61,7 @@ const DetailedStats = () => {
     { name: "Breathing Exercises", sessions: 32, percentage: 34, color: "#3398DB" },
     { name: "Stretching Routines", sessions: 26, percentage: 28, color: "#7EC8E3" },
     { name: "Posture Correction", sessions: 21, percentage: 22, color: "#A3E4D7" },
-    { name: "Stress Relief", sessions: 15, percentage: 16, color: "#F6E7C1" }
+    { name: "Stress Relief", sessions:41, percentage: 16, color: "#F6E7C1" }
   ];
 
   const timeDistribution = [

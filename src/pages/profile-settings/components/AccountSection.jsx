@@ -4,17 +4,19 @@ import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
 import Select from '../../../components/ui/Select';
+import profileImg from "../../../../images/profileImg.jpg";
 
 const AccountSection = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [profileData, setProfileData] = useState({
-    name: "Sarah Johnson",
-    email: "sarah.johnson@email.com",
-    age: "32",
+    name: "Osama Alsaid",
+    email: "CareVis.is.the.future@email.com",
+    age: "23",
     activityLevel: "moderate",
     primaryGoal: "stress-relief",
-    avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1ae7d9bdc-1762274136565.png",
-    avatarAlt: "Professional headshot of woman with shoulder-length brown hair smiling at camera"
+    avatar: profileImg,
+avatarAlt: "Profile image",
+
   });
 
   const activityLevelOptions = [

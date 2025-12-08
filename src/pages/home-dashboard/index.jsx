@@ -80,7 +80,7 @@ const HomeDashboard = () => {
           {/* Welcome Section */}
           <div className="mb-8">
             <WelcomeSection 
-              userName="Alex"
+              userName="Osama"
               currentDate={getCurrentDate()}
             />
           </div>

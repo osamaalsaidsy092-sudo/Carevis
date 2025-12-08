@@ -46,11 +46,11 @@ const CommunityPage = () => {
   ];
 
   const leaderboard = [
-    { rank: 1, name: "Emily Chen", points: 1250, streak: 21, badge: "Wellness Champion" },
-    { rank: 2, name: "David Wilson", points: 1180, streak: 18, badge: "Consistency King" },
-    { rank: 3, name: "Lisa Park", points: 1050, streak: 15, badge: "Team Player" },
-    { rank: 4, name: "James Lee", points: 980, streak: 12, badge: "Rising Star" },
-    { rank: 5, name: "Anna Kim", points: 920, streak: 10, badge: "Dedicated" }
+    { rank: 1, name: "**** ***", points: 1250, streak: 21, badge: "Wellness Champion" },
+    { rank: 2, name: "*** *****", points: 1180, streak: 18, badge: "Consistency King" },
+    { rank: 3, name: "*** ****", points: 1050, streak: 15, badge: "Team Player" },
+    { rank: 4, name: "**** ***", points: 980, streak: 12, badge: "Rising Star" },
+    { rank: 5, name: "**** ***", points: 920, streak: 10, badge: "Dedicated" }
   ];
 
   const challenges = [

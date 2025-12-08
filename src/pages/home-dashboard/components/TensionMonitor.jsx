@@ -24,23 +24,10 @@ const TensionMonitor = () => {
       id: 'shoulders',
       name: 'Shoulders',
       icon: 'Minus',
-      position: { top: '25%', left: '30%' },
+      position: { top: '45%', left: '50%' },
       description: 'Shoulder blades and deltoids'
     },
-    {
-      id: 'upperBack',
-      name: 'Upper Back',
-      icon: 'Square',
-      position: { top: '35%', left: '50%' },
-      description: 'Thoracic spine and rhomboids'
-    },
-    {
-      id: 'lowerBack',
-      name: 'Lower Back',
-      icon: 'Rectangle',
-      position: { top: '55%', left: '50%' },
-      description: 'Lumbar spine and erector spinae'
-    },
+    
     {
       id: 'hips',
       name: 'Hips',

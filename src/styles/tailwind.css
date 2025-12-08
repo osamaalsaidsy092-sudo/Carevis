@@ -7,14 +7,14 @@
 @layer base {
   :root {
     /* Core Colors */
-    --color-background: #F3F8FC; /* barely-there blue tint */
+    --color-background: #f3fcf4; /* barely-there blue tint */
     --color-foreground: #2F3E46; /* deep slate gray */
-    --color-border: #E5E7EB; /* light gray */
+    --color-border: #c4f4d8; /* light gray */
     --color-input: #FFFFFF; /* pure white */
     --color-ring: #3398DB; /* calming sky blue */
     
     /* Card Colors */
-    --color-card: #FFFFFF; /* pure white */
+    --color-card: #ffffff; /* pure white */
     --color-card-foreground: #2F3E46; /* deep slate gray */
     
     /* Popover Colors */
@@ -26,7 +26,7 @@
     --color-muted-foreground: #6B7280; /* medium gray */
     
     /* Primary Colors */
-    --color-primary: #3398DB; /* calming sky blue */
+    --color-primary: #58ba3a; /* calming sky blue */
     --color-primary-foreground: #FFFFFF; /* white */
     
     /* Secondary Colors */
@@ -52,6 +52,64 @@
     /* Error Colors */
     --color-error: #EF4444; /* soft red */
     --color-error-foreground: #FFFFFF; /* white */
+  }
+
+  /* Dark theme overrides (applies when 'dark' class is on root html) */
+  .dark {
+    --color-background: #0b1220; /* very dark blue-gray */
+    --color-foreground: #e6eef8; /* light text */
+    --color-border: #1f2937;
+    --color-input: #0f1724;
+    --color-ring: #0eb03e;
+    --color-card: #131f34;
+    --color-card-foreground: #e6eef8;
+    --color-popover: #0f1724;
+    --color-popover-foreground: #e6eef8;
+    --color-muted: #071026;
+    --color-muted-foreground: #9aa4b2;
+    --color-primary: #67e63c;
+    --color-primary-foreground: #0b1220;
+    --color-secondary: #60f5d4;
+    --color-secondary-foreground: #071026;
+    --color-destructive: #f87171;
+    --color-destructive-foreground: #0b1220;
+    --color-accent: #2dd478;
+    --color-accent-foreground: #0b1220;
+    --color-success: #34d399;
+    --color-success-foreground: #071026;
+    --color-warning: #f59e0b;
+    --color-warning-foreground: #071026;
+    --color-error: #ef4444;
+    --color-error-foreground: #071026;
+  }
+
+  /* High contrast overrides (applies when 'high-contrast' class is on root html) */
+  .high-contrast {
+    --color-background: #000000; /* pure black */
+    --color-foreground: #ffffff; /* pure white */
+    --color-border: #ffffff;
+    --color-input: #000000;
+    --color-ring: #97f69d; /* bright yellow focus */
+    --color-card: #000000;
+    --color-card-foreground: #ffffff;
+    --color-popover: #000000;
+    --color-popover-foreground: #ffffff;
+    --color-muted: #000000;
+    --color-muted-foreground: #ffffff;
+    --color-primary: #7cff83; /* vivid yellow */
+    --color-primary-foreground: #000000;
+    --color-secondary: #00ffff; /* vivid cyan */
+    --color-secondary-foreground: #000000;
+    --color-destructive: #ff0000;
+    --color-destructive-foreground: #000000;
+    --color-accent: #00ff00;
+    --color-accent-foreground: #000000;
+    --color-success: #00ff00;
+    --color-success-foreground: #000000;
+    --color-warning: #ffcc00;
+    --color-warning-foreground: #000000;
+    --color-error: #ff0000;
+    --color-error-foreground: #000000;
   }
 
   * {
@@ -124,11 +182,24 @@
       transition: none !important;
     }
   }
+
+  /* Reduced motion class (applies when user enables reduce-motion in settings) */
+  .reduced-motion .breathing-animation,
+  .reduced-motion .slide-up-enter,
+  .reduced-motion .completion-ring {
+    animation: none !important;
+    transition: none !important;
+  }
   
   /* Touch Target Optimization */
   .touch-target {
     min-height: 48px;
     min-width: 48px;
     padding: 8px;
+  }
+
+  /* Large text support */
+  .large-text {
+    font-size: 1.125rem; /* 18px base */
   }
 }

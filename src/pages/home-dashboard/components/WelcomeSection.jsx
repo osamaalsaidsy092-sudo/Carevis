@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
 
-const WelcomeSection = ({ userName = "Alex", currentDate }) => {
+const WelcomeSection = ({ userName = "Osama", currentDate }) => {
   const dailyQuotes = [
     "Every small step towards wellness is a victory worth celebrating.",
     "Your body is your temple. Keep it pure and clean for the soul to reside in.",

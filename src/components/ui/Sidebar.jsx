@@ -8,11 +8,15 @@ const Sidebar = ({ isCollapsed = false, onToggleCollapse, userRole = 'user' }) =
   const navigate = useNavigate();
   const [hoveredItem, setHoveredItem] = useState(null);
 
+  // Hide the sidebar on specific routes (e.g. profile page)
+  const hideOnPaths = ['/profile-settings'];
+  if (hideOnPaths.includes(location?.pathname)) return null;
+
   const navigationItems = [
     { 
-      label: 'Dashboard', 
+      label: 'Home', 
       path: '/home-dashboard', 
-      icon: 'LayoutDashboard',
+      icon: 'Home',
       description: 'Your wellness overview'
     },
     { 
@@ -62,8 +66,8 @@ const Sidebar = ({ isCollapsed = false, onToggleCollapse, userRole = 'user' }) =
 
   const Logo = () => (
     <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'space-x-3'} mb-8`}>
-      <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-gentle">
-        <Icon name="Heart" size={24} color="white" />
+      <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden shadow-gentle bg-transparent">
+        <img src="/images/LOGO.png" alt="CareVis logo" className="w-full h-full object-contain" />
       </div>
       {!isCollapsed && (
         <div>

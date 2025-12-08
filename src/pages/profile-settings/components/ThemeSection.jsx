@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
 const ThemeSection = () => {
-  const [selectedTheme, setSelectedTheme] = useState('light');
+  const [selectedTheme, setSelectedTheme] = useState(() => {
+    try {
+      return localStorage.getItem('carevis-theme') || 'light';
+    } catch (e) {
+      return 'light';
+    }
+  });
 
   const themes = [
     {
@@ -34,9 +40,26 @@ const ThemeSection = () => {
 
   const handleThemeChange = (themeId) => {
     setSelectedTheme(themeId);
-    // Theme change logic would go here
+    try {
+      localStorage.setItem('carevis-theme', themeId);
+    } catch (e) {}
     console.log('Changing theme to:', themeId);
   };
+
+  useEffect(() => {
+    // Apply the theme classes/attributes
+    const root = document.documentElement;
+
+    // Clear both classes first
+    root.classList.remove('dark');
+    root.classList.remove('high-contrast');
+
+    if (selectedTheme === 'dark') {
+      root.classList.add('dark');
+    } else if (selectedTheme === 'high-contrast') {
+      root.classList.add('high-contrast');
+    }
+  }, [selectedTheme]);
 
   return (
     <div className="bg-card rounded-2xl p-6 shadow-gentle border border-border">
